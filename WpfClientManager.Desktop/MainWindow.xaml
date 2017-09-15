@@ -1,0 +1,35 @@
+﻿<Window xmlns:Controls="clr-namespace:WpfClientManager.Desktop.Controls"  x:Class="WpfClientManager.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClientManager.Desktop"
+        mc:Ignorable="d" Icon="icon.ico"
+        Title="Client Manger" Height="400" Width="600" Background="LightBlue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto "/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Clients">
+                <MenuItem Name="miShowClients" Header="Show clients" Click="miShowClients_Click"/>
+                <Separator/>
+                <MenuItem Name="miExit" Header="Exit" Click="miExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Products">
+
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+                <MenuItem Header="Contact"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Name="gridMainContent" Grid.Row="1">
+            <ContentPresenter Name="mainContent"/>
+        </Grid>
+
+    </Grid>
+</Window>
