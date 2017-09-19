@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WpfClientManager.Domain")]
+[assembly: AssemblyTitle("WpfMovieManager.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WpfClientManager.Domain")]
+[assembly: AssemblyProduct("WpfMovieManager.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3fd33bd9-c060-4420-9269-34538a9fc3ac")]
+[assembly: Guid("92ec79cf-3a67-4ad0-beed-2b6488efb7ad")]
 
 // Version information for an assembly consists of the following four values:
 //

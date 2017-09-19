@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DA3ACAB-7BF6-42EA-88D4-A6736A24DA3C}</ProjectGuid>
+    <ProjectGuid>{694AD94C-5058-492E-8F32-4832A3A6E992}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfClientManager.Desktop</RootNamespace>
-    <AssemblyName>WpfClientManager.Desktop</AssemblyName>
+    <RootNamespace>WpfMovieManager.Desktop</RootNamespace>
+    <AssemblyName>WpfMovieManager.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\ClientListControl.xaml">
+    <Page Include="Controls\MovieListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,8 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\ClientListControl.xaml.cs">
-      <DependentUpon>ClientListControl.xaml</DependentUpon>
+    <Compile Include="Controls\MovieListControl.xaml.cs">
+      <DependentUpon>MovieListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -76,7 +76,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ClientListModel.cs" />
+    <Compile Include="Models\MovieListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,13 +104,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfClientManager.Domain\WpfClientManager.Domain.csproj">
-      <Project>{3fd33bd9-c060-4420-9269-34538a9fc3ac}</Project>
-      <Name>WpfClientManager.Domain</Name>
-    </ProjectReference>
+    <Resource Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon.ico" />
+    <ProjectReference Include="..\WpfMovieManager.Domain\WpfMovieManager.Domain.csproj">
+      <Project>{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}</Project>
+      <Name>WpfMovieManager.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

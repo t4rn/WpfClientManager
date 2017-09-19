@@ -1,11 +1,11 @@
-﻿<Window xmlns:Controls="clr-namespace:WpfClientManager.Desktop.Controls"  x:Class="WpfClientManager.Desktop.MainWindow"
+﻿<Window x:Class="WpfMovieManager.Desktop.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfClientManager.Desktop"
+        xmlns:local="clr-namespace:WpfMovieManager.Desktop"
         mc:Ignorable="d" Icon="icon.ico"
-        Title="Client Manger" Height="400" Width="600" Background="LightBlue">
+        Title="MainWindow" Height="400" Width="900" Background="LightBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,12 +13,16 @@
         </Grid.RowDefinitions>
 
         <Menu Grid.Row="0">
-            <MenuItem Header="Clients">
-                <MenuItem Name="miShowClients" Header="Show clients" Click="miShowClients_Click"/>
+            <MenuItem Header="Movies">
+                <MenuItem Name="miShowMovies" Header="Show movies" Click="miShowMovies_Click"/>
+                <MenuItem Name="miAddMovie" Header="Add movie..." Click="miAddMovie_Click"/>
                 <Separator/>
                 <MenuItem Name="miExit" Header="Exit" Click="miExit_Click"/>
             </MenuItem>
-            <MenuItem Header="Products">
+            <MenuItem Header="TV Shows">
+
+            </MenuItem>
+            <MenuItem Header="Actors">
 
             </MenuItem>
             <MenuItem Header="Help">

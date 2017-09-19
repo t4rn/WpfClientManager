@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMovieManager.Desktop", "WpfMovieManager.Desktop\WpfMovieManager.Desktop.csproj", "{694AD94C-5058-492E-8F32-4832A3A6E992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMovieManager.Domain", "WpfMovieManager.Domain\WpfMovieManager.Domain.csproj", "{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{694AD94C-5058-492E-8F32-4832A3A6E992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694AD94C-5058-492E-8F32-4832A3A6E992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694AD94C-5058-492E-8F32-4832A3A6E992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694AD94C-5058-492E-8F32-4832A3A6E992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

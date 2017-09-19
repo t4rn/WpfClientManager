@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfClientManager.Desktop.Properties
+namespace WpfMovieManager.Desktop.Properties
 {
 
 

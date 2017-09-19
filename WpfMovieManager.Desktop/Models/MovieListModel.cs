@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using WpfClientManager.Domain;
+using WpfMovieManager.Domain.Movies;
 
-namespace WpfClientManager.Desktop.Models
+namespace WpfMovieManager.Desktop.Models
 {
-    public class ClientListModel : INotifyPropertyChanged
+    public class MovieListModel : INotifyPropertyChanged
     {
-        private List<Client> clients;
-        public List<Client> Clients
+        private List<Movie> movies;
+        public List<Movie> Movies
         {
-            get { return clients; }
-            set { clients = value; OnPropertyChanged(); }
+            get { return movies; }
+            set { movies = value; OnPropertyChanged(); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

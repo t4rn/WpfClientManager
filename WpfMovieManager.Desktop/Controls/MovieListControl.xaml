@@ -1,20 +1,20 @@
-﻿<UserControl x:Class="WpfClientManager.Desktop.Controls.ClientListControl"
+﻿<UserControl x:Class="WpfMovieManager.Desktop.Controls.MovieListControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WpfClientManager.Desktop.Controls"
+             xmlns:local="clr-namespace:WpfMovieManager.Desktop.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel>
-            <Button Name="btnGetClients" Content="Get Clients" Click="btnGetClients_Click" />
+            <Button Name="btnGetMovies" Content="Get Movies" Click="btnGetMovies_Click" />
 
-            <DataGrid Name="dgClients"
+            <DataGrid Name="dgMovies"
                   AlternatingRowBackground="LightBlue"
                   CanUserAddRows="False"
-                  ItemsSource="{Binding Clients}">
-        </DataGrid>
+                  ItemsSource="{Binding Movies}">
+            </DataGrid>
         </StackPanel>
     </Grid>
 </UserControl>

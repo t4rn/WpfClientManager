@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FD33BD9-C060-4420-9269-34538A9FC3AC}</ProjectGuid>
+    <ProjectGuid>{92EC79CF-3A67-4AD0-BEED-2B6488EFB7AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfClientManager.Domain</RootNamespace>
-    <AssemblyName>WpfClientManager.Domain</AssemblyName>
+    <RootNamespace>WpfMovieManager.Domain</RootNamespace>
+    <AssemblyName>WpfMovieManager.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clients\Client.cs" />
-    <Compile Include="Clients\ClientRepository.cs" />
-    <Compile Include="Clients\ClientService.cs" />
+    <Compile Include="Movies\MovieService.cs" />
+    <Compile Include="Persons\Person.cs" />
+    <Compile Include="Movies\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
