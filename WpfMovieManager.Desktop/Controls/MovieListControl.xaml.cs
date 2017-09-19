@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using WpfMovieManager.Desktop.Models;
 using WpfMovieManager.Domain.Movies;
 
@@ -21,9 +23,20 @@ namespace WpfMovieManager.Desktop.Controls
             DataContext = _model;
         }
 
-        private void btnGetMovies_Click(object sender, RoutedEventArgs e)
+        internal void Init(List<Movie> movies)
         {
-            _model.Movies = _movieService.GetMovies();
+            _model.Movies = movies;
         }
+
+        private void dgMoviesRow_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            Movie movie = row.Item as Movie;
+
+            var movieWindow = new MovieDetails();
+            movieWindow.ShowDialog();
+
+        }
+
     }
 }

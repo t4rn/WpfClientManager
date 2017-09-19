@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMovieManager.Desktop"
         mc:Ignorable="d" Icon="icon.ico"
-        Title="MainWindow" Height="400" Width="900" Background="LightBlue">
+        Title="Movie Manager" Height="400" Width="900" Background="LightBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
