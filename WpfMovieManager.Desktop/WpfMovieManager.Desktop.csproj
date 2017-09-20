@@ -80,6 +80,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\MovieDetailsModel.cs" />
     <Compile Include="Models\MovieListModel.cs" />
     <Compile Include="MovieDetails.xaml.cs">
       <DependentUpon>MovieDetails.xaml</DependentUpon>

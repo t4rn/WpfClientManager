@@ -12,22 +12,22 @@
             <RowDefinition Height="Auto "/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0">
+        <Menu Grid.Row="0" FontSize="14">
             <MenuItem Header="Movies">
                 <MenuItem Name="miShowMovies" Header="Show movies" Click="miShowMovies_Click"/>
                 <MenuItem Name="miAddMovie" Header="Add movie..." Click="miAddMovie_Click"/>
                 <Separator/>
                 <MenuItem Name="miExit" Header="Exit" Click="miExit_Click"/>
             </MenuItem>
-            <MenuItem Header="TV Shows">
+            <MenuItem Name="miTvShows" Header="TV Shows" Click="miTvShows_Click">
 
             </MenuItem>
-            <MenuItem Header="Actors">
+            <MenuItem Name="miActors" Header="Actors" Click="miActors_Click">
 
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="About"/>
-                <MenuItem Header="Contact"/>
+                <MenuItem Header="About" Name="miAbout" Click="miAbout_Click"/>
+                <MenuItem Header="Contact" Name="miContact" Click="miContact_Click" />
             </MenuItem>
         </Menu>
 

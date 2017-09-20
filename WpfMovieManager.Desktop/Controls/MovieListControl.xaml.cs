@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WpfMovieManager.Desktop.Models;
@@ -30,13 +29,16 @@ namespace WpfMovieManager.Desktop.Controls
 
         private void dgMoviesRow_DoubleClick(object sender, MouseButtonEventArgs e)
         {
+            Opacity = 0.4;
+
             DataGridRow row = sender as DataGridRow;
             Movie movie = row.Item as Movie;
 
             var movieWindow = new MovieDetails();
+            movieWindow.Init(movie);
             movieWindow.ShowDialog();
 
+            Opacity = 1;
         }
-
     }
 }

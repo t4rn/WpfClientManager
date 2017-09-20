@@ -14,7 +14,8 @@
                   CanUserAddRows="False"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
-                  ItemsSource="{Binding Movies}">
+                  ItemsSource="{Binding Movies}"
+                  FontSize="14">
                 <DataGrid.Resources>
                     <Style TargetType="DataGridRow">
                         <EventSetter Event="MouseDoubleClick" Handler="dgMoviesRow_DoubleClick"/>

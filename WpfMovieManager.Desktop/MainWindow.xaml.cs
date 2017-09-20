@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using WpfMovieManager.Desktop.Controls;
 using WpfMovieManager.Domain.Movies;
@@ -33,7 +34,36 @@ namespace WpfMovieManager.Desktop
 
         private void miAddMovie_Click(object sender, RoutedEventArgs e)
         {
+            ShowInProgress((sender as MenuItem).Header.ToString());
+        }
 
+        private void miContact_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Contact me on FB...", "Contact Me",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void miAbout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Application made by https://github.com/t4rn", 
+                "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void miTvShows_Click(object sender, RoutedEventArgs e)
+        {
+            ShowInProgress((sender as MenuItem).Header.ToString());
+        }
+
+        private void miActors_Click(object sender, RoutedEventArgs e)
+        {
+            ShowInProgress((sender as MenuItem).Header.ToString());
+        }
+
+
+
+        private void ShowInProgress(string caption)
+        {
+            MessageBox.Show("In progress...", caption, MessageBoxButton.OK);
         }
     }
 }

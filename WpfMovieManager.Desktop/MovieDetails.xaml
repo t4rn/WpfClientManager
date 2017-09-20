@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMovieManager.Desktop"
         mc:Ignorable="d" Icon="icon.ico"
-        Title="Movie Details" Height="300" Width="300" Background="LightBlue">
+        Title="Movie Details" Height="300" Width="400" Background="LightBlue">
+    <Window.Resources>
+        <Style x:Key="WindowHeader" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5, 10" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+        </Style>
+        <Style x:Key="TextBoxLabel" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style x:Key="TextBoxData" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Movie.Title}" Style="{StaticResource WindowHeader}"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Release date" Style="{StaticResource TextBoxLabel}"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Movie.ReleaseDate}" Style="{StaticResource TextBoxData}"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Gendre" Style="{StaticResource TextBoxLabel}"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Movie.Gendre}" Style="{StaticResource TextBoxData}"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Length" Style="{StaticResource TextBoxLabel}"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Movie.LengthInMinutes}" Style="{StaticResource TextBoxData}"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Director" Style="{StaticResource TextBoxLabel}"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Movie.Director.FullName}" Style="{StaticResource TextBoxData}"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Actors" Style="{StaticResource TextBoxLabel}"/>
+
+        <ListBox Grid.Row="5" Grid.Column="1" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold" 
+                 Margin="5" VerticalAlignment="Top" MouseDoubleClick="ListBox_MouseDoubleClick" ItemsSource="{Binding Movie.Actors}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FullName}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Name="btnBack" Grid.Row="6" Grid.Column="0" Content="Back" Margin="0,10"
+                HorizontalAlignment="Right" Width="100" Click="btnBack_Click" />
     </Grid>
 </Window>

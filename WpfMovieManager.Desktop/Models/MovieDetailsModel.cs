@@ -1,19 +1,22 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using WpfMovieManager.Domain.Movies;
 
 namespace WpfMovieManager.Desktop.Models
 {
-    public class MovieListModel : INotifyPropertyChanged
+    public class MovieDetailsModel : INotifyPropertyChanged
     {
-        private List<Movie> movies;
-        public List<Movie> Movies
-        {
-            get { return movies; }
-            set { movies = value; OnPropertyChanged(); }
-        }
+        public Movie Movie { get; set; }
 
+        public string Actors
+        {
+            get
+            {
+                string result = null;
+                Movie.Actors.ForEach(x => { result = $"{result} \r\n {x.FullName}"; });
+                return result.Trim();
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

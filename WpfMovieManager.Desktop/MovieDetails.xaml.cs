@@ -1,28 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WpfMovieManager.Desktop.Models;
+using WpfMovieManager.Domain.Movies;
+using WpfMovieManager.Domain.Persons;
 
 namespace WpfMovieManager.Desktop
 {
-    /// <summary>
-    /// Interaction logic for MovieDetails.xaml
-    /// </summary>
     public partial class MovieDetails : Window
     {
+        private MovieDetailsModel _movieModel;
+
         public MovieDetails()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            _movieModel = new MovieDetailsModel();
+            DataContext = _movieModel;
+        }
+
+        internal void Init(Movie movie)
+        {
+            _movieModel.Movie = movie;
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Opacity = 0.4;
+
+            var listBox = sender as ListBox;
+            var actor = listBox.SelectedItem as Person;
+            MessageBox.Show($"{actor.FullName} born on {actor.BirthDate.ToShortDateString()}.", "Actor info", MessageBoxButton.OK);
+
+            Opacity = 1;
         }
     }
 }
